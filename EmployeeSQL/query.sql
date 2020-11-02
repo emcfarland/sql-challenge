@@ -1,10 +1,3 @@
---SELECT * FROM departments;
---SELECT * FROM dept_emp;
---SELECT * FROM dept_managers;
---SELECT * FROM employees ORDER BY emp_no;
---SELECT * FROM salaries;
---SELECT * FROM titles;
-
 --Return employee numbers, first and last names, sexes, and salaries,
 --order by employee number
 SELECT e.emp_no, e.first_name, e.last_name, e.sex, s.salary
