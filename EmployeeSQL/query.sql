@@ -54,7 +54,17 @@ ORDER BY emp_no;
 
 --Return employee numbers, last and first names, 
 --and department name for employees in Sales and Development departments
-
+SELECT d.dept_name, e.emp_no, e.last_name, e.first_name
+FROM dept_emp AS de
+INNER JOIN departments AS d
+ON d.dept_no = de.dept_no
+INNER JOIN employees AS e
+ON de.emp_no = e.emp_no
+WHERE d.dept_name = 'Sales' OR d.dept_name = 'Development'
+ORDER BY emp_no;
 
 --Return frequency of employees' last names in descending order
-
+SELECT last_name, COUNT(last_name) AS frequency
+FROM employees
+GROUP BY last_name
+ORDER BY frequency DESC;
